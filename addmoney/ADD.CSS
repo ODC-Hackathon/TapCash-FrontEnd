@@ -1,0 +1,175 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: "ubuntu";
+}
+
+body{
+    margin-bottom: 0;
+    background-image: url('add\ \(2\).jpg');
+    background-position: center left;
+    background-repeat: no-repeat;
+    background-size: 600px;
+}
+
+.navpar{
+    grid-area: nav;
+    margin-bottom: 6%;
+}
+.sidebar{
+    margin-top: 62px;
+    grid-area: sidebar;
+}
+
+.title{
+    color: gold;
+    text-decoration: none;
+    font-size: 30px;
+    font-weight: bold;
+    font-family: 'Instrument Serif', serif;
+    margin-right: 20px;
+}
+
+header {
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 50px;
+    background: #013067;
+}
+header .header-left {
+    display: flex;
+    align-items: center;
+}
+header .header-left .logo {
+    width: 140px;
+}
+header .header-left nav {
+    margin-left: 50px;
+}
+header .header-left nav ul {
+    display: flex;
+}
+nav ul li a {
+    display: block;
+    color: #cfd9e0;
+    font-size: 24px;
+    padding: 5px 10px;
+    transition: 0.2s;
+}
+nav ul li a:hover,
+nav ul li a.active {
+    color: #fff;
+}
+nav .login-signup {
+    display: none;
+}
+header .header-right {
+    display: flex;
+    align-items: center;
+}
+header .login-signup {
+    color: #cfd9e0;
+    font-weight: bold;
+}
+header .login-signup a {
+    display: inline-block;
+    color: #0b2239;
+    background: #4ad295;
+    padding: 5px 12px;
+    border-radius: 5px;
+}
+header .header-right .hamburger {
+    margin-left: 20px;
+    cursor: pointer;
+    display: none;
+}
+header .header-right .hamburger div {
+    width: 30px;
+    height: 2px;
+    margin: 6px 0;
+    background: #fff;
+}
+
+
+
+
+/*------------------------------------ADD-------------------------*/
+.container {
+	max-width: 500px;
+	margin: 0 auto;
+	padding: 20px;
+    background-color: #12171e;
+    color: white;
+    border-radius: 4%
+}
+
+form {
+	display: flex;
+	flex-direction: column;
+    color: white;
+    
+}
+input{
+    width: 100%;
+	padding: 10px;
+	margin-bottom: 10px;
+	box-sizing: border-box;
+}
+#paymentMethod{
+    width: 100%;
+	padding: 10px;
+	margin-bottom: 10px;
+	box-sizing: border-box;
+}
+
+label, input, select {
+	margin-bottom: 10px;
+    
+    
+}
+
+input[type="submit"] {
+	background-color: #013067;
+	color: white;
+	border: none;
+	padding: 10px;
+	cursor: pointer;
+}
+
+input[type="submit"]:hover {
+	background-color: #45a049;
+}
+
+/*------------------------------FOOTER----------------------------*/
+.footer{
+    background-color: #013067;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding: 10px;
+    margin-top: 124.5px;
+
+}
+
+.footer-title{
+    font-size: 1.2em;
+    font-weight: 600;
+}
+
+.footer-title span{
+    color: gold;
+}
+
+.footer .social-icons a{
+    font-size: 1.2em;
+    padding: 0 12 0 0;
+    color: #fff;
+}

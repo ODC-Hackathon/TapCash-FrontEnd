@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="stayle.css">
+</head>
+<body>
+    <div class="weapper">
+    <header class="navpar">
+        <div class="header-left">
+            <div class="title">
+                <h3>Tap Cash</h3>
+            </div>
+            <nav>
+                <ul class="navlinks">
+                    <li>
+                        <a href="/Home page/index.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="/Landing.html">Dashboard</a>
+                    </li>
+                    <li>
+                        <a href="/index.html" class="active" id="card">Your Card</a>
+                    </li>
+                    <li>
+                        <a href="/Responsive Card Slider/index.html">Family Members</a>
+                    </li>
+                    <li>
+                        <a href="/S&R/S&R.html">Send Money</a>
+                    </li>
+                    <li>
+                        <a href="/S&R/R&S.html">Request Money</a>
+                    </li>
+                    <li>
+                        <a href="/addmoney/ADD.HTML">Add Money</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+       
+    </header>
+    <!---
+    <section class="sidebar">
+        <div class="top">
+            <div class="logo">
+                <span>Tap Cash</span>
+            </div>
+            <i class="bx bx-menu-alt-left" id="btn"></i>
+        </div>
+        
+        <ul>
+            <li>
+                <a href="#">
+                    <i class='bx bxs-wallet'></i>
+                    <span class="nav-item">Dashboard</span>  
+                </a>
+                <span class="tooltip">Dashboard</span>
+            </li>
+            <li>
+                <a href="#">
+                    <i class='bx bx-male-female'></i>
+                    <span class="nav-item">Family</span>  
+                </a>
+                <span class="tooltip">Family</span>
+            </li>
+            <li>
+                <a href="#">
+                    <i class='bx bxs-credit-card' id="generate-button"></i>
+                    <span class="nav-item">cards</span>  
+                </a>
+                <span class="tooltip">Your card</span>
+                
+            </li>
+            <li>
+                <a href="#">
+                    <i class='bx bxs-paper-plane' ></i>
+                    <span class="nav-item">Send</span>  
+                </a>
+                <span class="tooltip">Send money</span>
+            </li>
+            <li>
+                <a href="#">
+                    <i class='bx bxs-left-down-arrow-circle'></i>
+                    <span class="nav-item">Request</span>  
+                </a>
+                <span class="tooltip">Request money</span>
+            </li>
+        </ul>
+    </section>
+    --->
+    <div class="card">
+        <div class="card__logo">
+          <img src="/visa.png" alt="Visa logo" style="width: 50px;">
+        </div>
+        <div class="card__number">
+          <p id="cardNumber">0000 0000 0000 0000</p>
+        </div>
+        <div class="card__info">
+          <div class="card__info--left">
+            <p id="cardHolder">CARDHOLDER NAME</p>
+            <p id="cardExp">MM/YY</p>
+          </div>
+          <div class="card__info--right">
+            <p id="cardCVV">000</p>
+          </div>
+        </div>
+      </div>
+      <button class="vibtn" id="generate-button">Generate New Visa</button>
+            
+    </div>
+    <footer class="footer">
+        <p class="footer-title">Copyrights @<span> Hug For Bugs</span></p>
+        <div class="social-icons">
+            <a href="#"><i class='bx bxl-linkedin'></i></a>
+            <a href="#"><i class='bx bxl-facebook-square'></i></a>
+            <a href="#"><i class='bx bxl-google-plus-circle'></i></a>
+        </div>
+    </footer>
+    <script>
+        hamburger = document.querySelector(".hamburger");
+        nav = document.querySelector("nav");
+        hamburger.onclick = function() {
+            nav.classList.toggle("active");
+            
+        }
+        let btn = document.querySelector('#btn');
+        let sidebar = document.querySelector('.sidebar');
+
+        btn.onclick = function(){
+        sidebar.classList.toggle('active');
+        };
+
+        const myButton = document.getElementById("Card");
+        myButton.addEventListener("click", function() {
+        window.location.href = "./index.html";
+});
+
+        document.getElementById("generate-button").addEventListener("click", generateVisa);
+        let cardNumber = Math.floor(Math.random() * 9000000000000000) + 1000000000000000;
+        document.getElementById("cardNumber").innerHTML = cardNumber;
+        // Get the current month and year and add 5 years to generate the expiration date
+        let currentDate = new Date();
+        let currentMonth = ("0" + (currentDate.getMonth() + 1)).slice(-2);
+        let currentYear = currentDate.getFullYear().toString().substr(-2);
+        let expirationMonth = ("0" + (currentDate.getMonth() + 1)).slice(-2);
+        let expirationYear = (parseInt(currentDate.getFullYear().toString().substr(-2)) + 5).toString();
+        document.getElementById("cardExp").innerHTML = expirationMonth + "/" + expirationYear;
+        // Generate a random CVV code
+        let cardCVV = Math.floor(Math.random() * 900) + 100;
+        document.getElementById("cardCVV")
+    </script>
+</body>
+</html>

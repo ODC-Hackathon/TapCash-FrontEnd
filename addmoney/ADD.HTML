@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Add Money Page</title>
+	<link rel="stylesheet" type="text/css" href="ADD.CSS">
+</head>
+<body>
+    <header class="navpar">
+        <div class="header-left">
+            <div class="title">
+                <h3>Tap Cash</h3>
+            </div>
+            <nav>
+                <ul class="navlinks">
+                    <li>
+                        <a href="/Home page/index.html" class="active">Home</a>
+                    </li>
+                    <li>
+                        <a href="/side.html">Dashboard</a>
+                    </li>
+                    <li>
+                        <a href="/index.html" id="card">Your Card</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        </header>
+    
+	<div class="container">
+		<h1>Add Money</h1>
+		<form>
+			<label for="amount">Amount:</label>
+			<input type="number" id="amount" name="amount"><br>
+
+			<label for="paymentMethod">Payment Method:</label>
+			<select id="paymentMethod" name="paymentMethod">
+                <option value="mobinil-cash">Mobinil Cash</option>
+                <option value="vodafone-cash">Vodafone Cash</option>
+                <option value="etisalat-cash">Etisalat Cash</option>
+				<option value="visa">Visa</option>
+			</select><br>
+
+			<div id="visaFields" style="display: none;">
+				<label for="visaNumber">Visa Number:</label>
+				<input type="text" id="visaNumber" name="visaNumber"><br>
+
+				<label for="expirationDate">Expiration Date:</label>
+				<input type="text" id="expirationDate" name="expirationDate"><br>
+
+				<label for="cvv">CVV:</label>
+				<input type="text" id="cvv" name="cvv"><br>
+			</div>
+
+            <div id="etisalat-fields" style="display: none;">
+                <label for="etisalat-number">Etisalat Number:</label>
+                <input type="text" id="etisalat-number" name="etisalat-number">
+              </div>
+              <div id="vodafone-fields" style="display: none;">
+                <label for="vodafone-number">Vodafone Number:</label>
+                <input type="text" id="vodafone-number" name="vodafone-number">
+              </div>
+              <div id="mobinil-fields" style="display: none;">
+                <label for="mobinil-number">Mobinil Number:</label>
+                <input type="text" id="mobinil-number" name="mobinil-number">
+              </div>
+
+			<input type="submit" value="Add Money">
+		</form>
+	</div>
+    <footer class="footer">
+        <p class="footer-title">Copyrights @<span> Hug For Bugs</span></p>
+        <div class="social-icons">
+            <a href="#"><i class='bx bxl-linkedin'></i></a>
+            <a href="#"><i class='bx bxl-facebook-square'></i></a>
+            <a href="#"><i class='bx bxl-google-plus-circle'></i></a>
+        </div>
+    </footer>
+	<script src="ADD.JS"></script>
+</body>
+</html>

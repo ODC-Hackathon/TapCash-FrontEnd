@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sidebar menu With Sub-menus</title>
+    <link rel="stylesheet" href="bar.css" />
+  </head>
+  <body>
+    <div class="dropdown">
+      <button class="dropbtn">Dropdown</button>
+      <div class="dropdown-content">
+        <a href="#">Link 1</a>
+        <a href="#">Link 2</a>
+        <a href="#">Link 3</a>
+        <div class="add-link">
+          <input type="text" id="new-link" placeholder="Add new link">
+          <button id="add-link-btn">Add</button>
+        </div>
+      </div>
+    </div>
+    
+  <section>
+    </section>
+    <script>
+      // Get the dropdown button and content
+const dropdownBtn = document.querySelector('.dropbtn');
+const dropdownContent = document.querySelector('.dropdown-content');
+
+// Show or hide the dropdown content when the button is clicked
+dropdownBtn.addEventListener('click', () => {
+  dropdownContent.classList.toggle('show');
+});
+
+// Get the input and button for adding a new link
+const newLinkInput = document.querySelector('#new-link');
+const addLinkBtn = document.querySelector('#add-link-btn');
+
+// Add a new link to the dropdown when the button is clicked
+addLinkBtn.addEventListener('click', () => {
+  const newLink = newLinkInput.value;
+  const newLinkElement = document.createElement('a');
+  newLinkElement.href = '#';
+  newLinkElement.textContent = newLink;
+  dropdownContent.insertBefore(newLinkElement, dropdownContent.lastElementChild);
+  newLinkInput.value = '';
+});
+
+// Remove a link from the dropdown when it is clicked
+dropdownContent.addEventListener('click', (event) => {
+  if (event.target.tagName === 'A') {
+    event.preventDefault();
+    event.target.remove();
+  }
+});
+
+    </script>
+  </body>
+</html>

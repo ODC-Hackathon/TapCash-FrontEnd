@@ -1,0 +1,30 @@
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    
+}
+.footer{
+    background-color: #000016;
+    color: #fff;
+    padding: 1em;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-title{
+    font-size: 1.2em;
+    font-weight: 600;
+}
+
+.footer-title span{
+    color: rgb(51, 75, 211);
+}
+
+.footer .social-icons a{
+    font-size: 1.2em;
+    padding: 0 12 0 0;
+}
+
